@@ -40,3 +40,29 @@
     </form>
 </body>
 </html>
+
+
+
+
+
+
+function strlen() {
+    var a, b, c, d, e, f, g, h, i, j;
+    a = String(document.getElementById("fname").value);
+    b = String(document.getElementById("lname").value);
+    e = String(document.getElementById("num").value);
+    g = document.getElementById("date").value;
+    console.log(a, b, e, g);
+    c = a.length;
+    d = b.length;
+    f = e.length;
+    h = new Date(g);
+    i = h.getFullYear();
+    j = 2022 - i;
+    if (c < 3) {alert("Enter Valid Name.")}
+    if (d < 3) {alert("Enter Valid Last Name.")}
+    if (f == 10) {return true}
+    else {return alert("Enter Valid Phone Number.")}
+    if (j>18) {return true}
+    else {return alert("Sorry. Birthdate Out Of Range.")}
+}
