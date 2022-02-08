@@ -66,3 +66,30 @@ function strlen() {
     if (j>18) {return true}
     else {return alert("Sorry. Birthdate Out Of Range.")}
 }
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var s1 = "Hi, How are you ? what's going on ? I am fine. What about you ?";
+        var a = s1.split("?");
+        var b = s1.slice(4,7);
+        var c = s1.substring(4,16);
+        var d = s1.charAt("1");
+        console.log(a[0]);
+        console.log(a[0].length);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+        console.log(s1.trim());
+    </script>
+</body>
+</html>
