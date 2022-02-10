@@ -93,3 +93,54 @@ function strlen() {
     </script>
 </body>
 </html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>phone number</title>
+    <script>
+      function restrictions() {
+        var phNum, firstDigit, allDigits, numValidate, numResult, rangeResult;
+        phNum = String(document.getElementById("num").value);
+        firstDigit = phNum.charAt("0");
+        numValidate = /[6-9]/g;
+        numResult = numValidate.test(firstDigit);
+        allDigits = /[0-9]/g;
+        rangeResult = allDigits.test(Number(phNum));
+        if (rangeResult == false) {
+          alert("Enter proper number");
+        }
+
+        if (numResult == false) {
+          alert("Number should start with 6,7,8,9");
+        }
+        if (phNum.length == 10) {
+          return true;
+        } else {
+          alert("Enter valid number");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <label for="num">Phone Number:</label>
+      <input
+        type="text"
+        name="num"
+        id="num"
+        placeholder="Phone Number"
+        required
+        title="should start with digits 6,7,8 or 9"
+      />
+      <br /><br />
+      <input type="submit" onclick="restrictions()" />
+    </form>
+  </body>
+</html>
